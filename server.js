@@ -41,16 +41,16 @@ function generateBadgeURL(score, compact = false, category = null) {
 
   const url = new URL(`https://img.shields.io/badge/-${score}-grey.svg`);
   url.searchParams.set('label', label);
-  url.searchParams.set('colorA', '242ffd');
+  url.searchParams.set('colorA', '314efe');
   url.searchParams.set('style', 'flat-square');
   url.searchParams.set('logo', lhLogoDataURL);
   url.searchParams.set('maxAge', 24*60*60); // cache for 24hrs
 
-  let colorB = 'df332f';
+  let colorB = 'c42527';
   if (score >= RATINGS.PASS.minScore) {
-    colorB = '2b882f';
+    colorB = '20813d';
   } else if (score >= RATINGS.AVERAGE.minScore) {
-    colorB = 'ef6c00';
+    colorB = 'e57620';
   }
 
   url.searchParams.set('colorB', colorB);
